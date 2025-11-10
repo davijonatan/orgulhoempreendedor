@@ -23,11 +23,12 @@
   <!-- Menu lateral -->
   <nav class="menu" id="menu">
     <a href="index.html">Início</a>
-    <a href="inscreva-se.html">Inscreva-se</a>
-    <a href="curadoria.html">Curadoria</a>
+    <a href="https://subscribepage.io/OrgulhoEmpreendedor">Inscreva-se</a>
+    <a href="#filtros-form">Curadoria</a>
     <a href="sobre.html">Sobre Nós</a>
-    <a href="contato.html">Entre em Contato</a>
-    <a href="blog.html">BLOG</a>
+    <a href="#contato">Entre em Contato</a>
+    <a href="blog.html">Blog</a>
+    <a href="Login.html">LOGIN</a>
   </nav>
 </header>
 
@@ -48,7 +49,7 @@
   <div class="hero-container">
     <div class="hero-texto">
       <h1>
-        <span class="destaque">Empreendedores LGBTQIAPN+:</span><br>
+        <span class="destaque">Empreendedores LGBTQIAPN+</span><br>
         Seu Negócio<br>Merece Destaque!
       </h1>
 
@@ -57,15 +58,16 @@
         <p>💼 <strong>Para Empresas e Clientes:</strong> Descubra negócios incríveis que valorizam a diversidade!</p>
       </div>
 
-      <button class="hero-botao-principal">
-        🏳️‍🌈 SOU LGBTQIAPN+ - QUERO ME CADASTRAR!
-      </button>
+    <a href="https://subscribepage.io/OrgulhoEmpreendedor" class="hero-botao-principal">
+       🏳️‍🌈 SOU LGBTQIAPN+ E QUERO ME CADASTRAR!
+    </a>
 
-      <div class="hero-botoes-secundarios">
-        <button class="botao-secundario">🎯 Descobrir Negócios</button>
-        <button class="botao-secundario">🌈 Entrar na Comunidade</button>
-        <button class="botao-secundario">❓ Dúvidas Frequentes</button>
-      </div>
+
+<div class="hero-botoes-secundarios">
+  <button class="botao-secundario" onclick="window.location.href='#filtros-form'">🎯 Descobrir Negócios</button>
+  <button class="botao-secundario" onclick="window.location.href='comunidade.html'">🌈 Entrar na Comunidade</button>
+  <button class="botao-secundario" onclick="window.location.href='FAQ.html'">❓ Dúvidas Frequentes</button>
+</div>
     </div>
 
     <div class="hero-dados">
@@ -77,14 +79,14 @@
   </div>
    </section>
 
-    <section id="feedbacks">
+<section id="feedbacks">
   <h2>💬 O que dizem sobre nós</h2>
   <p class="subtitulo">
     Histórias reais de empreendedores e clientes que fazem parte da nossa comunidade! 🌟
   </p>
 
   <div class="carrossel-container">
-    <div class="carrossel" id="carrossel">
+    <div class="carrossel">
       <div class="card">
         <h3>💻 Carlos Santos</h3>
         <p class="cargo">Empreendedor · <span>TechAcessível</span></p>
@@ -117,37 +119,42 @@
     </div>
   </div>
 
-  <div class="controles">
-    <button id="prev">◀</button>
-    <button id="next">▶</button>
-  </div>
 </section>
 
 
-    <section id="beneficios">
+<section id="beneficios">
   <h2>🎁 Benefícios para Todos</h2>
   <p class="subtitulo">
     Descubra como o Orgulho Empreendedor pode transformar sua jornada, 
     seja você empreendedor, cliente ou empresa! 🌟
   </p>
 
+  <!-- EMPREENDEDOR -->
   <div class="beneficio">
     <div class="beneficio-header">
-      <img src="icone-foguete.svg" alt="Ícone foguete">
+      <span class="emoji">🚀</span>
       <div>
-        <h3>Para Você, Empreendedor</h3>
+        <h3>Para Você, Empreendedor</h3>        
         <p>Descubra como podemos impulsionar seu negócio</p>
       </div>
       <span class="toggle">+</span>
     </div>
     <div class="beneficio-conteudo">
-      <p>Tadfgasdfgasdfadfas!</p>
+      <div class="beneficio-grid">
+        <div class="caixa"><div>👁️</div><h5>Visibilidade Garantida</h5><p>Seu negócio em destaque para milhares de clientes.</p></div>
+        <div class="caixa"><div>🤝</div><h5>Networking Qualificado</h5><p>Conecte-se com outros empreendedores.</p></div>
+        <div class="caixa"><div>📚</div><h5>Capacitação Gratuita</h5><p>Workshops e mentorias gratuitas.</p></div>
+        <div class="caixa"><div>💰</div><h5>Aumento de Vendas</h5><p>Clientes engajados e conscientes.</p></div>
+        <div class="caixa"><div>🏆</div><h5>Programa de Aceleração</h5><p>Oportunidades exclusivas para crescer.</p></div>
+        <div class="caixa"><div>🌈</div><h5>Comunidade Acolhedora</h5><p>Rede de apoio e crescimento mútuo.</p></div>
+      </div>
     </div>
   </div>
 
+  <!-- CLIENTE -->
   <div class="beneficio">
     <div class="beneficio-header">
-      <img src="icone-sacola.svg" alt="Ícone sacola de compras">
+      <span class="emoji">🛍️</span>
       <div>
         <h3>Para Você, Cliente</h3>
         <p>Vantagens de comprar de negócios diversos</p>
@@ -155,13 +162,21 @@
       <span class="toggle">+</span>
     </div>
     <div class="beneficio-conteudo">
-      <p>Casdfasdfasdfasdgasfdgasgasfgasdgafga.</p>
+      <div class="beneficio-grid">
+        <div class="caixa"><div>🔍</div><h5>Encontre Negócios Únicos</h5><p>Produtos e serviços com propósito.</p></div>
+        <div class="caixa"><div>💖</div><h5>Consumo Consciente</h5><p>Apoie negócios diversos e inclusivos.</p></div>
+        <div class="caixa"><div>🎁</div><h5>Benefícios Exclusivos</h5><p>Descontos e experiências únicas.</p></div>
+        <div class="caixa"><div>🌍</div><h5>Impacto Social</h5><p>Fortaleça comunidades LGBTQIAPN+.</p></div>
+        <div class="caixa"><div>📱</div><h5>Plataforma Intuitiva</h5><p>Encontre o que ama de forma fácil.</p></div>
+        <div class="caixa"><div>💬</div><h5>Contato Direto</h5><p>Converse com quem faz acontecer.</p></div>
+      </div>
     </div>
   </div>
 
+  <!-- EMPRESA -->
   <div class="beneficio">
     <div class="beneficio-header">
-      <img src="icone-empresa.svg" alt="Ícone prédio corporativo">
+      <span class="emoji">🏢</span>
       <div>
         <h3>Para Sua Empresa</h3>
         <p>Fortaleça seus programas de diversidade</p>
@@ -169,52 +184,18 @@
       <span class="toggle">+</span>
     </div>
     <div class="beneficio-conteudo">
-      <p>Cdfasfgagasdgasgafgasdfgasdgasfg.</p>
-    </div>
-  </div>
-</section>
-
-
-    <section id="funcionamento">
-  <h2>🚀 Jornada do Empreendedor LGBTQIAPN+</h2>
-  <p class="subtitulo">
-    Sua trilha para o sucesso empreendedor com orgulho e visibilidade!
-  </p>
-
-  <div class="timeline">
-    <div class="etapa left">
-      <div class="conteudo">
-        <h3>1. Cadastre-se <span>GRÁTIS</span></h3>
-        <p>Preencha nosso formulário simples com informações sobre você e seu negócio. É rápido, fácil e 100% gratuito! Conte sua história e mostre seu orgulho.</p>
-        <small>⏰ Tempo: 5 minutos</small>
-      </div>
-    </div>
-
-    <div class="etapa right">
-      <div class="conteudo">
-        <h3>2. Curadoria e Aprovação</h3>
-        <p>Nossa equipe analisa seu cadastro com carinho e atenção. Verificamos informações e garantimos que você tenha o melhor perfil possível na plataforma.</p>
-        <small>⏰ Tempo: até 48 horas</small>
-      </div>
-    </div>
-
-    <div class="etapa left">
-      <div class="conteudo">
-        <h3>3. Perfil Ativo na Plataforma</h3>
-        <p>Seu negócio ganha visibilidade imediata! Aparece na curadoria, recebe contatos de clientes interessados e faz parte da maior rede LGBTQIAPN+ do Brasil.</p>
-        <small>✨ Resultado: Visibilidade imediata</small>
-      </div>
-    </div>
-
-    <div class="etapa right">
-      <div class="conteudo">
-        <h3>4. Networking e Comunidade</h3>
-        <p>Conecte-se com outros empreendedores, participe de eventos, workshops gratuitos e faça parte de uma comunidade que te apoia e celebra.</p>
-        <small>🤝 Benefício: Rede de apoio</small>
+      <div class="beneficio-grid">
+        <div class="caixa"><div>🤝</div><h5>Parcerias Estratégicas</h5><p>Conecte-se com negócios inclusivos.</p></div>
+        <div class="caixa"><div>💼</div><h5>Reputação Positiva</h5><p>Mostre compromisso com diversidade.</p></div>
+        <div class="caixa"><div>📣</div><h5>Reconhecimento Social</h5><p>Destaque em campanhas e eventos.</p></div>
+        <div class="caixa"><div>🌱</div><h5>Responsabilidade Social</h5><p>Contribua para um mercado mais justo.</p></div>
+        <div class="caixa"><div>🏳️‍🌈</div><h5>Inclusão Corporativa</h5><p>Ambientes mais acolhedores e diversos.</p></div>
+        <div class="caixa"><div>📊</div><h5>Impacto Mensurável</h5><p>Métricas reais de impacto positivo.</p></div>
       </div>
     </div>
   </div>
 </section>
+
 
 
       <section id="busca" class="card fade-in">
@@ -336,7 +317,7 @@
 
   <section id="contato">
   <h2>Entre em Contato</h2>
-  <p>Fique por dentro das novidades do Orgulho Empreendedor. Inscreva-se na nossa newsletter!</p>
+  <h4>Fique por dentro das novidades do Orgulho Empreendedor. Inscreva-se na nossa newsletter!</h4>
 
   <div class="newsletter-card">
     <div class="newsletter-info">
@@ -390,9 +371,10 @@
 
     
     <section id="parceiros">
-      <p>MARINAAAAAAA QUEM É PARCEIRO??????</p>
-      <img src="Itaú_Unibanco_logo_2023.svg.png" alt="Par1" class="parceiro1">
+      <h1>PARCEIROS</h1>
+      <img src="ITAU.svg" alt="Par1" class="parceiro1">
     </section>
+  
   </main>
 
   <footer>
