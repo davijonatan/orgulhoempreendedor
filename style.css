@@ -109,7 +109,7 @@ header .logo {
 /* Quando o menu hambúrguer aparece (telas pequenas) */
 @media (max-width: 768px) {
   header .logo {
-    width: 50%; /* reduz a logo para 50% do tamanho do header */
+    width: 18%; /* reduz a logo para 50% do tamanho do header */
   }
 }
 
@@ -213,17 +213,24 @@ section {
   text-align: center;
 }
 
+#contato h4 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
 #contato h2 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #65007a;
+  color: #ffffff;
 }
 
 #contato p {
   font-size: 1rem;
-  color: #333;
+  color: #000000;
   margin-bottom: 30px;
 }
+
 
 .newsletter-card {
   background-color: #ffffff;
@@ -344,7 +351,7 @@ section {
 }
 
 .hero-texto .destaque {
-  color: #a3007a;
+  color: #6800ad;
 }
 
 .hero-descricao p {
@@ -357,23 +364,22 @@ section {
 }
 
 .hero-botao-principal {
-  background-color: #ffe600;
-  color: #3a0066;
-  font-weight: 800;
-  border: none;
-  border-radius: 10px;
-  padding: 15px 25px;
+  display: inline-block;
+  background-color: #a13be0;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 30px 80px;
+  border-radius: 12px;
   font-size: 1.1rem;
-  cursor: pointer;
-  margin-top: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .hero-botao-principal:hover {
-  background-color: #ffed5a;
-  transform: scale(1.03);
+  background-color: #8a32c7;
+  transform: scale(1.05);
 }
+
 
 .hero-botoes-secundarios {
   display: flex;
@@ -383,9 +389,9 @@ section {
 }
 
 .botao-secundario {
-  border: 2px solid #fff;
+  border: 2px solid #6a21af;
   background-color: rgba(255,255,255,0.15);
-  color: #fff;
+  color: #000000;
   font-weight: 600;
   border-radius: 10px;
   padding: 10px 18px;
@@ -410,9 +416,9 @@ section {
   border-radius: 15px;
   padding: 30px;
   text-align: center;
-  color: #fff;
+  color: #000000;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -441,6 +447,7 @@ section {
   background: linear-gradient(180deg, #fff 0%, #f8d6ff 100%);
   padding: 80px 20px;
   text-align: center;
+  overflow: hidden;
 }
 
 #feedbacks h2 {
@@ -458,15 +465,20 @@ section {
 .carrossel-container {
   overflow: hidden;
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .carrossel {
   display: flex;
-  gap: 20px;
-  scroll-behavior: smooth;
-  transition: transform 0.4s ease;
+  gap: 1em;
+  animation: scroll 35s linear infinite;
+  width: max-content;
+}
+
+.carrossel::after {
+  content: "";
+  display: flex;
+  width: 100%;
 }
 
 .card {
@@ -502,35 +514,23 @@ section {
   line-height: 1.4;
 }
 
-.controles {
-  margin-top: 20px;
-}
-
-.controles button {
-  background-color: #d265ff;
-  border: none;
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 10px 18px;
-  margin: 0 5px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.controles button:hover {
-  background-color: #a13be0;
+/* Animação contínua */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .carrossel {
-    gap: 10px;
-  }
   .card {
     flex: 0 0 80%;
   }
 }
+
 
 /* ===== SEÇÃO BENEFÍCIOS ===== */
 #beneficios {
@@ -551,13 +551,13 @@ section {
   margin-bottom: 50px;
 }
 
-/* Cartões */
+/* Cartões principais */
 .beneficio {
   background-color: #fff;
   border-radius: 20px;
-  padding: 20px 25px;
+  padding: 25px;
   margin: 20px auto;
-  max-width: 900px;
+  max-width: 950px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   overflow: hidden;
   transition: all 0.3s ease;
@@ -566,71 +566,101 @@ section {
 .beneficio-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   cursor: pointer;
 }
 
-.beneficio-header img {
-  width: 50px;
-  height: 50px;
+.beneficio-header .emoji {
+  font-size: 3.5rem;
   margin-right: 15px;
 }
 
 .beneficio-header h3 {
   color: #a13be0;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin: 0;
   text-align: left;
 }
 
 .beneficio-header p {
   color: #333;
-  margin: 2px 0 0 0;
   font-size: 1rem;
+  margin: 3px 0 0;
   text-align: left;
 }
 
-.beneficio-header .toggle {
+.toggle {
   color: #a13be0;
   font-weight: bold;
   font-size: 1.8rem;
-  margin-left: 15px;
   transition: transform 0.3s ease;
 }
 
-/* Conteúdo escondido */
+/* Conteúdo expansível */
 .beneficio-conteudo {
   max-height: 0;
   overflow: hidden;
-  text-align: left;
-  padding-left: 65px;
-  color: #444;
-  line-height: 1.5;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
   opacity: 0;
+  transition: max-height 0.6s ease, opacity 0.4s ease;
+  margin-top: 0;
 }
 
-/* Quando aberto */
 .beneficio.ativo .beneficio-conteudo {
-  max-height: 200px;
+  max-height: 1000px; /* altura suficiente */
   opacity: 1;
+  margin-top: 20px;
 }
 
 .beneficio.ativo .toggle {
   transform: rotate(45deg);
 }
 
+/* Grid de caixinhas */
+.beneficio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.caixa {
+  background: #fdf3ff;
+  border-radius: 20px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caixa:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.caixa div {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.caixa h5 {
+  color: #a13be0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.caixa p {
+  color: #444;
+  font-size: 0.95rem;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
   .beneficio-header {
     flex-direction: row;
-    align-items: flex-start;
-  }
-  .beneficio-header img {
-    width: 40px;
-    height: 40px;
+    justify-content: space-between;
   }
 }
+
 
 /* ===== SEÇÃO FUNCIONAMENTO ===== */
 #funcionamento {
@@ -748,46 +778,27 @@ section {
 .etapa:nth-child(3) .conteudo { background-color: #f1dbff; }
 .etapa:nth-child(4) .conteudo { background-color: #ffe8f8; }
 
-/* ===== Responsividade ===== */
-@media (max-width: 768px) {
-  .timeline::after {
-    left: 20px;
-  }
 
-  .etapa {
-    width: 100%;
-    padding-left: 60px;
-    padding-right: 25px;
-  }
-
-  .etapa::before {
-    left: 10px;
-  }
-
-  .etapa.right {
-    left: 0;
-  }
-}
 
 #busca {
-  display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #ff7ee9, #ff4ff6);
+  background: linear-gradient(135deg, #ffcbf6, #ffa2fa);
   color: #fff;
   animation: fadeIn 1.5s ease-in-out;
 }
 
 .busca-container {
   text-align: center;
-  max-width: 500px;
+  max-width: 100%;
   width: 90%;
 }
 
 .busca-container h2 {
   margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 6rem;
   letter-spacing: 1px;
 }
 
@@ -883,7 +894,24 @@ section {
 }
 
 #contato { background-color: #b34dff; }
+
 #parceiros { background-color: #eb86ff; }
+
+#parceiros h1 {
+  color: #ffffff;
+} 
+
+#parceiros img {
+  width: 100px;
+  height: auto; /* mantém proporção */
+}
+
+
+
+
+
+
+
 
 
 /* ========== CARD DE BUSCA ========== */
@@ -899,19 +927,19 @@ section {
 
 /* header do card */
 .card-header{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:12px}
-.card-header h2{margin:0;color:var(--accent-purple);font-size:18px}
+.card-header h2{margin:0;font-size:25px}
 .icon-peq{font-size:18px}
 
 /* grupo diversidade (pills) */
 .grupo-diversidade{display:flex;flex-direction:column;gap:10px;margin:6px 8px 18px}
-.label-peq{font-size:13px;color:#fb7cffee;margin-bottom:4px}
+.label-peq{font-size:13px;color:#8c0091ee;margin-bottom:4px}
 .pills{display:flex;flex-wrap:wrap;gap:10px}
 .pill{
   padding:8px 14px;
   border-radius:var(--pill-radius);
   background:#f293ff;
   border: 1px solid var(--pink-outline);
-  color:#6b2b6e;
+  color:#58185c;
   font-weight:600;
   cursor:pointer;
   font-size:13px;
@@ -965,7 +993,7 @@ section {
 .acoes{display:flex;justify-content:center;margin-top:18px}
 .btn-limpar{
   background:#ff77ed; /* cinza azulado */
-  color:#ff7cd8;
+  color:#000000;
   padding:10px 22px;
   border-radius:22px;
   border:none;
